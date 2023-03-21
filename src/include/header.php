@@ -31,7 +31,7 @@ session_unset();
 <!--          --><?php // if (isset($_SESSION['id'])) : ?>
           <li class="header__list-item header__list-item_login list-item">
             <button type="button" class=" btn header__button">
-              <i class="fa-regular fa-user fa-user__header"></i>
+              <i class="fa-regular fa-user fa-user__header">1</i>
               <?php echo $_SESSION['username'] ?> 
             </button>
             </li>
