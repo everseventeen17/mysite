@@ -11,17 +11,8 @@ export class Api {
         }
     }
 // 1. Авторизация пользователя
-    postAuthData(obj) {
-        return fetch(`${this._link}usersAuth.php`, {
-            headers: this._headers,
-            method: 'POST',
-            body: JSON.stringify(obj)
-        })
-            .then(this._checkResponse)
-    };
-    // 2. Регистрация пользователя
-    postRegData(obj) {
-        return fetch(`${this._link}usersReg.php`, {
+    postUserData(obj) {
+        return fetch(`${this._link}users.php`, {
             headers: this._headers,
             method: 'POST',
             body: JSON.stringify(obj)

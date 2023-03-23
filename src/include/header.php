@@ -1,9 +1,9 @@
 <?php
 
-include ($_SERVER['DOCUMENT_ROOT']).'/src/php/controllers/usersAuth.php';
-print_r($_SESSION);
-session_abort();
-session_unset();
+include ($_SERVER['DOCUMENT_ROOT']).'/src/php/controllers/users.php';
+
+
+
 
 
 
@@ -28,30 +28,31 @@ session_unset();
             <li class="header__list-item list-item">
                 <a href="/reg/" class="header__link link">Registration</a>
             </li>
-<!--          --><?php // if (isset($_SESSION['id'])) : ?>
+          <?php  if (isset($_SESSION['id'])) : ?>
           <li class="header__list-item header__list-item_login list-item">
             <button type="button" class=" btn header__button">
-              <i class="fa-regular fa-user fa-user__header">1</i>
-              <?php echo $_SESSION['username'] ?> 
+              <i class="fa-regular fa-user fa-user__header"></i>
+              <?php echo $_SESSION['username'] ?>
             </button>
             </li>
 
-            <div class="popup popup__user-log">
+
+            <div class="">
               <div class="popup__container">
-              <a href="" class="header__exit-link link">Profile</a>
+              <a href="/profile/" class="header__exit-link link">Profile</a>
               <a href="<?php echo BASE_URL. "./src/php/controllers/logout.php"?>" class="header__exit-link link">Logout</a>
               </div>
             </div>
 
         
 
-<!--            --><?php //else : ?>
+            <?php else : ?>
             <li class="header__list-item list-item">
-              <a href="/auth/"class="header__link link">
+              <a href="/auth/" class="header__link link">
               <i class="fa-regular fa-user fa-user__header"></i>Login
               </a>
             </li>
-<!--            --><?php //endif; ?>
+            <?php endif; ?>
 
             
           </li>

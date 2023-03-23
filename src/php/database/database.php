@@ -1,5 +1,6 @@
 <?php
 include ($_SERVER['DOCUMENT_ROOT'].'/src/php/database/connect.php');
+session_start();
 
 function test($value){
   echo '<pre>';

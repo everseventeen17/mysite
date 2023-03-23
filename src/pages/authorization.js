@@ -12,11 +12,12 @@ const apiAuth = new Api(apiUserData);
 
 formAuthorization.addEventListener('submit', (e)=>{
     e.preventDefault();
-    apiAuth.postAuthData(getUseInfo())
+    apiAuth.postUserData(getUseInfo('authorization'))
         .then(data => {
             if(data !== ''){
                 hideForm(formAuthorization);
                 successMessage.textContent = 'Поздравляем вы успешно вошли в систему';
+                window.location.href = '/';
 
             }else{
                 errorMessage.textContent = "Введенные вами данные не корректы";
@@ -27,16 +28,18 @@ formAuthorization.addEventListener('submit', (e)=>{
 })
 
 
-function getUseInfo (){
+function getUseInfo (act){
     return {
         email: emailAuthInput.value,
         password: passwordAuthInput.value,
+        action: act,
     };
 }
 
 function hideForm (form) {
     form.classList.add('form__hide');
 }
+
 function showForm (form) {
     form.classList.remove('form__hide');
 }

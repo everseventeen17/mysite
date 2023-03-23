@@ -34,32 +34,7 @@
   <main class="main">
     <div class="container-fluid">
       <div class="container">
-          <p class="form__success-text text-center mt-3"></p>
-        <form method="POST" name="form" novalidate class="form__authorization d-flex flex-column align-items-center">
-          <h2 class="form__title">Authentication form</h2>
-          <p class="form__erorr-text_top"></p>
-           <!-- Email input -->
-           <div class="form-group mb-3 col-12 col-md-4">
-            <label for="exampleInputEmail1">Email address</label>
-            <input name="email" type="email" class="form__input-text form__input-text_email form-control"
-            value="<?php  ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
-             placeholder="Enter email" required minlength="2" maxlength="40">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            <span class="form__erorr-text form__erorr-text_email">1</span>
-          </div>
-          <!-- Password input -->
-          <div class="form-group mb-3 col-12 col-md-4">
-            <label for="exampleInputPassword1">Password</label>
-            <input name="password" type="password"
-            class="form__input-text_password form__input-text form-control"
-            required minlength="2" id="exampleInputPassword1" placeholder="Password">
-            <span class="form__erorr-text form__erorr-text_password">1</span>
-          </div>
-          <!-- Submit button -->
-          <button name="button_auth" type="submit" class="form__submit-btn btn btn-dark mb-3 col-12 col-md-4">Authorization</button>
-          <p class="form__text">First time? <a href="/reg/" class="form__link form__link_auth link">Registration</a></p>
-            <p class="form__error-text text-center mt-3"></p>
-        </form>
+         Hello user
 
       </div>
     </div>
@@ -83,7 +58,7 @@
 
   <!-- JQ file -->
 
-  <script type="module" src="../src/pages/authorization.js"></script>
+
 
   </body>
 

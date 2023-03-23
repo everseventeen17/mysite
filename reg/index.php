@@ -31,6 +31,7 @@ include ($_SERVER['DOCUMENT_ROOT']) . '/src/include/header.php';
     <div class="container-fluid">
         <div class="container">
 
+            <p class="form__success-text text-center mt-3"></p>
             <form name="registration_form" novalidate
                   class="form__registration d-flex flex-column align-items-center" method="POST">
                 <h2 class="form__title">Registration form</h2>
@@ -72,8 +73,8 @@ include ($_SERVER['DOCUMENT_ROOT']) . '/src/include/header.php';
                 <p class="form__success-text"></p>
                 <button name="button_reg" type="submit" class="form__submit-btn btn mb-3 col-12 col-md-4">Registration
                 </button>
-                <a href="<?php
-                echo BASE_URL . "auth.php" ?>" class="form__link form__link_auth link">Sign in</a>
+                <a href="<?php echo BASE_URL . "auth.php" ?>" class="form__link form__link_auth link">Sign in</a>
+                <p class="form__error-text text-center mt-3"></p>
             </form>
 
         </div>
